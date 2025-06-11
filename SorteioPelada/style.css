@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: Raleway;
+    background: linear-gradient(90deg, #04105b, #390574);
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 2rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-family: Raleway;
+    margin-left: 1rem;
+}
+
+
+.inicial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+button {
+    width: 20rem;
+    height: 4rem;
+    background: linear-gradient(10deg, #106105, #07a644);
+    border: solid #07b94b;
+    border-radius: 30px;
+    font-family: Raleway;
+    font-weight: 700;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.inicial,
+.quantidade,
+.players,
+.sorted {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.inicial {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2; 
+}
+
+.quantidade {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.inicial.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.quantidade.show {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+.quantidade.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.players {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.players.show {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+.players.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sorted {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.sorted.show {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+h3 {
+    font-family: Raleway;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+#inps {
+    text-align: center;
+    font-family: Raleway;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+#times, #jogPerTime {
+    width: 2.5rem;
+    height: 2rem;
+    border-radius: 10px;
+    font-size: 25px;
+    font-family: Raleway;
+}
+
+.dinamic-jog-input {
+    margin-left: 15rem;
+    width: 12rem;
+    height: 2rem;
+    background-color: transparent;
+    border-radius: 25px;
+    border-color: #fff;
+    color: #fff;
+    font-family: Raleway;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.dinamic-hability {
+    border-radius: 20px;
+    width: 6rem;
+    height: 2.5rem;
+    background: linear-gradient(20deg, #ff5500, #8c3408);
+    color: #fff;
+    border-color: #fff;
+    text-align: center;
+}
+
+#options, #optionsPositions {
+    background-color: #000;
+}
+
+.dinamic-position {
+    border-radius: 20px;
+    width: 6rem;
+    height: 2.5rem;
+    background: linear-gradient(10deg, #106105, #07a644);
+    color: #fff;
+    border-color: #fff;
+    text-align: center;
+}
+
+#btnSortear {
+    margin-left: 15rem;
+}
+
+.sorted {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dinamic-div-times {
+    width: 25rem;
+    height: 20rem;
+    border: solid #fff;
+    border-radius: 20px;
+    border-width: 1.5px;
+    background-color: transparent;
+}
+
+/* Responsividade geral */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+        margin-top: 1rem;
+    }
+
+    .dinamic-jog-input,
+    .dinamic-hability,
+    .dinamic-position {
+        width: 80%;
+        margin: 0.5rem auto;
+        display: block;
+    }
+
+    #btnSortear {
+        margin: 1rem auto;
+        display: block;
+    }
+
+    #inps {
+        font-size: 1.5rem;
+    }
+}
+
+/* Grade dos times sorteados */
+.times-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+/* Bloco de cada time */
+.dinamic-div-times {
+    width: 280px;
+    min-height: 200px;
+    padding: 1rem;
+    border: solid 1.5px #fff;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+/* Título do time */
+.dinamic-div-times h4 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Nota média no canto superior direito */
+.team-average {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: #07a644;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+}

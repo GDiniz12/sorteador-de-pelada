@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador equilibrado de pelada</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h2>sorteador.de.times.com</h2>
+    </header>
+
+
+    <div class="container">
+        <div class="inicial" id="inicial">
+    <h1>Faça um sorteio equilibrado para a sua pelada!</h1>
+    <button id="start">Começar agora</button>
+        </div>
+
+        <div class="quantidade" id="quantidade">
+            <h3>Diga quantos times serão e quantos jogadores por time</h3>
+
+            <div id="inps">
+            <label for="times">Quantos times?</label>
+            <input type="number" name="times" id="times">
+                <br>
+            <label for="jogPerTime">Quantos jogadores por time?</label>
+            <input type="number" name="jogPerTime" id="jogPerTime">
+                <br>
+            <button id="next">Próximo</button>
+            </div>
+        </div>
+
+        <div class="players" id="players">
+                <h3>Agora digite os nomes dos jogadores, suas habilidades e posições!</h3>
+        </div>
+
+        <div class="sorted" id="sorted">
+            <h3>Times sorteados!</h3>
+            <div id="outputTimes" class="times-grid"></div>
+        </div>
+    </div>
+</body>
+</html>
